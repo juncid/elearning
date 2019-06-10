@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from courses.views import my_first_view
+from courses.views import course_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<who>', my_first_view),
+    path('course_detail/<course_id>', course_detail),
 ]
